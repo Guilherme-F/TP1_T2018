@@ -11,7 +11,8 @@ public class AlunoConcomitante extends Aluno {
     boolean apresentouCertificadoEM;
     
     public boolean podeSolicitarDiploma() {
-        if (apresentouCertificadoEM) {
+        if (apresentouCertificadoEM && super.podeSolicitarDiploma()) {
+            //Poderia ser tambem if (apresentouCertificadoEM && concluiuMaterias && entregouDocumentacoes) {
             return true;
         } else {
             return false;
